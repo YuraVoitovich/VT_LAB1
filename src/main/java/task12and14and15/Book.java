@@ -29,12 +29,23 @@ public class Book implements Comparable<Book>{
         return isbn.compareTo(o.isbn);
     }
 
+
+    @Override
+    public String toString() {
+        return "Book:{\n" +
+                "title='" + title + '\n' +
+                ", isbn='" + isbn + '\n' +
+                ", author='" + author + '\n' +
+                ", price=" + price +
+                '}';
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return price == book.price && Objects.equals(title, book.title) && Objects.equals(author, book.author);
+        return price == book.price && title.equals(book.title) && author.equals(book.author);
     }
 
     @Override

@@ -14,7 +14,7 @@ public class ProgrammerBook extends Book {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         ProgrammerBook that = (ProgrammerBook) o;
-        return level == that.level && Objects.equals(language, that.language);
+        return level == that.level && language.equals(that.language);
     }
 
     @Override
