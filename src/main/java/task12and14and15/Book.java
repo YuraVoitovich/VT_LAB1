@@ -34,9 +34,9 @@ public class Book implements Comparable<Book>{
     public String toString() {
         return "Book:{\n" +
                 "title='" + title + '\n' +
-                ", isbn='" + isbn + '\n' +
-                ", author='" + author + '\n' +
-                ", price=" + price +
+                "isbn='" + isbn + '\n' +
+                "author='" + author + '\n' +
+                "price=" + price + '\n' +
                 '}';
     }
 

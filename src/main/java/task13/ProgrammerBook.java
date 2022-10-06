@@ -24,4 +24,12 @@ public class ProgrammerBook extends Book {
         result = 31 * result + level;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "ProgrammerBook{\n" +
+                "language=" + language + '\n' +
+                "level=" + level + '\n' +
+                '}';
+    }
 }
