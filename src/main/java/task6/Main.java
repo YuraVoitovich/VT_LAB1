@@ -7,6 +7,6 @@ public class Main {
         SequenceToMatrixConverter sequenceToMatrixConverter = new SequenceToMatrixConverter();
         int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         MatrixPrinter matrixPrinter = new MatrixPrinter();
-        matrixPrinter.print(sequenceToMatrixConverter.convert(a, 3));
+        matrixPrinter.print(sequenceToMatrixConverter.convert(a));
     }
 }

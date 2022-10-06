@@ -3,7 +3,8 @@ package main.java.task6;
 import java.util.Arrays;
 
 public class SequenceToMatrixConverter {
-    public int[][] convert(int[] arr, int n) {
+    public int[][] convert(int[] arr) {
+        int n = arr.length;
         if (n <= 0) {
             throw new SequenceToMatrixConverterException("Matrix dimension is incorrect");
         }
@@ -12,13 +13,12 @@ public class SequenceToMatrixConverter {
         }
 
         int[][] matrix = new int[n][n];
-        int k = 0;
-        int z = 0;
-        for (int i = 0; i < arr.length; i++) {
-            matrix[k][z++] = arr[i];
-            if (i == (n * (k + 1) - 1)) {
-                z = 0;
-                k++;
+        int k;
+        for (int i = 0; i < n; i++) {
+            k = i;
+            for (int j = 0; j < arr.length; j++) {
+                matrix[i][j] = arr[k++];
+                if (k == arr.length) k = 0;
             }
         }
         return matrix;
